@@ -8,3 +8,10 @@
 Works!
 
 https://88uc1j0u8b.execute-api.us-west-2.amazonaws.com/Prod/hello/
+
+
+# Jan 11, 2023
+## Learned about AWS CodeCommit
+* Cloud git repos
+* Has to be a private repo, no way to make them public (hm, might not be what i want, i prefer to share my stuff)
+* Learned How to use AWS CLI to create a repo
