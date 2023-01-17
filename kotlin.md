@@ -1,4 +1,4 @@
-# Coroutines ROCK
+# Learning Kotlin Coroutines    
 
 ## AsyncTask old way, resize an image
 ```
@@ -58,5 +58,23 @@ class ImageResizer {
         return if (scaleFactor < 1) 1 else scaleFactor
     }
 }
+```
 
+## request Using traditional Android development
+```
+val url = "https://example.com"
+val request = Request.Builder().url(url).build()
+val client = OkHttpClient()
+val response = client.newCall(request).execute()
+val responseBody = response.body()?.string()
+```
+
+## Using Kotlin coroutines
+```
+val response = withContext(Dispatchers.IO) {
+    val client = OkHttpClient()
+    val request = Request.Builder().url(url).build()
+    client.newCall(request).execute()
+}
+val responseBody = response.body()?.string()
 ```
